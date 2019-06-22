@@ -1,0 +1,4 @@
+# https://hg.tryton.org/tryton-env/trytond
+bookmarks = da39a3ee5e6b4b0d3255bfef95601890afd80709
+store/phaseroots = da39a3ee5e6b4b0d3255bfef95601890afd80709
+store/00changelog.i = 5fad7d80fea7da5ea078f2a1f3ae91211d00ee70

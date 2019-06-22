@@ -1,0 +1,4 @@
+# https://hg.tryton.org/tryton-env/modules/country
+bookmarks = da39a3ee5e6b4b0d3255bfef95601890afd80709
+store/phaseroots = da39a3ee5e6b4b0d3255bfef95601890afd80709
+store/00changelog.i = 3e132da9a77fd8bb93aad7147683d8ed96ba4153

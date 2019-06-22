@@ -1,0 +1,26 @@
+version: '2.0'
+
+services:
+    postgres-5.0:
+        image: postgres:10
+        restart: unless-stopped
+    tryton-5.0:
+        build: .
+        volumes:
+            - '/home/tryton-env:/home/tryton-env'
+        environment:
+            - DB_HOSTNAME=postgres-5.0
+            - TRYTOND_WEB__HOSTNAME=demo5.0.tryton.org
+            - TRYTOND_WEB__NUM_PROXIES=1
+            - TRYTOND_SMTP__URI=smtp://smtpd:25
+            - TRYTOND_PASSWORD__LENGTH=0
+            - TRYTOND_PASSWORD__ENTROPY=0
+        ports:
+          - "8000:8000"
+        depends_on:
+            - postgres-5.0
+        command: tail -F anything
+        #restart: unless-stopped
+    smtpd:
+        image: b2ck/fake-smtpd
+        restart: unless-stopped
